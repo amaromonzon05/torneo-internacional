@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Torneo Internacional</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+
+    <header>
+
+        <h1>🏆 Torneo Internacional</h1>
+
+        <p>
+            Torneo realizado con JavaScript, HTML y CSS.
+        </p>
+
+    </header>
+
+
+    <!-- PARTICIPANTES -->
+
+    <main>
+
+        <section class="participantes">
+
+    <h2>Participantes</h2>
+
+    <div class="contenedor-participantes">
+
+        <!-- ERIC -->
+
+        <div class="participante">
+
+            <div class="foto-participante">
+           <img src="ERIC.jpeg" alt="Eric">
+        </div>
+
+            <h3>Eric</h3>
+
+            <button onclick="mostrarJugador('eric')">
+                Ver historial
+            </button>
+
+        </div>
+
+
+        <!-- AMARO -->
+
+        <div class="participante">
+
+           <div class="foto-participante">
+    <img src="AMARO.jpeg" alt="Amaro">
+</div>
+
+            <h3>Amaro</h3>
+
+            <button onclick="mostrarJugador('amaro')">
+                Ver historial
+            </button>
+
+        </div>
+
+
+        <!-- ADRIÁN -->
+
+        <div class="participante">
+
+            <div class="foto-participante">
+    <img src="ADRIAN.jpeg" alt="Adrián">
+</div>
+
+            <h3>Adrián</h3>
+
+            <button onclick="mostrarJugador('adrian')">
+                Ver historial
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- HISTORIAL DEL JUGADOR -->
+
+<section>
+
+    <h2>Historial del jugador</h2>
+
+    <div id="historial-jugador">
+        Seleccioná un jugador para ver su historial.
+    </div>
+
+</section>
+
+        <!-- SELECCIÓN DEL JUEGO -->
+
+        <section>
+
+            <h2>Seleccionar juego</h2>
+
+            <select id="juego">
+
+                <option>Ping Pong</option>
+                <option>Truco</option>
+                <option>Tiros al aro</option>
+                <option>Ajedrez</option>
+                <option>Juego de cartas</option>
+                <option>Preguntas y respuestas</option>
+
+            </select>
+
+        </section>
+
+
+        <!-- MARCADOR -->
+
+        <section>
+
+            <h2>Marcador</h2>
+
+            <p id="puntos-eric">
+                Eric: 0 puntos — 0 juegos ganados
+            </p>
+
+            <p id="puntos-amaro">
+                Amaro: 0 puntos — 0 juegos ganados
+            </p>
+
+            <p id="puntos-adrian">
+                Adrián: 0 puntos — 0 juegos ganados
+            </p>
+
+        </section>
+
+
+        <!-- PING PONG -->
+
+        <section id="seccion-victoria">
+
+            <h2>Registrar victoria — Ping Pong</h2>
+
+            <select id="jugador-ganador">
+
+                <option value="eric">Eric</option>
+                <option value="amaro">Amaro</option>
+                <option value="adrian">Adrián</option>
+
+            </select>
+
+            <button onclick="registrarVictoriaSeleccionada()">
+                Registrar victoria
+            </button>
+
+        </section>
+
+
+        <!-- TRUCO -->
+
+        <section id="seccion-truco" style="display: none;">
+
+            <h2>Registrar victoria — Truco</h2>
+
+            <select id="jugador-truco">
+
+                <option value="eric">Eric</option>
+                <option value="amaro">Amaro</option>
+                <option value="adrian">Adrián</option>
+
+            </select>
+
+            <button onclick="registrarVictoriaTruco()">
+                Registrar victoria
+            </button>
+
+        </section>
+
+
+        <!-- TIROS AL ARO -->
+
+        <section id="seccion-tiros-al-aro" style="display: none;">
+
+            <h2>Registrar resultado — Tiros al aro</h2>
+
+            <select id="jugador-tiros">
+
+                <option value="eric">Eric</option>
+                <option value="amaro">Amaro</option>
+                <option value="adrian">Adrián</option>
+
+            </select>
+
+            <input
+                type="number"
+                id="tiros-anotados"
+                min="0"
+                max="5"
+                placeholder="Tiros anotados"
+            >
+
+            <button onclick="registrarTirosAlAro()">
+                Registrar resultado
+            </button>
+
+        </section>
+
+
+        <!-- AJEDREZ -->
+
+        <section id="seccion-ajedrez" style="display: none;">
+
+            <h2>Registrar victoria — Ajedrez</h2>
+
+            <select id="jugador-ajedrez">
+
+                <option value="eric">Eric</option>
+                <option value="amaro">Amaro</option>
+                <option value="adrian">Adrián</option>
+
+            </select>
+
+            <button onclick="registrarVictoriaAjedrez()">
+                Registrar victoria
+            </button>
+
+        </section>
+
+
+        <!-- JUEGO DE CARTAS -->
+
+        <section id="seccion-cartas" style="display: none;">
+
+            <h2>Registrar victoria — Juego de cartas</h2>
+
+            <select id="jugador-cartas">
+
+                <option value="eric">Eric</option>
+                <option value="amaro">Amaro</option>
+                <option value="adrian">Adrián</option>
+
+            </select>
+
+            <button onclick="registrarVictoriaCartas()">
+                Registrar victoria
+            </button>
+
+        </section>
+
+
+        <!-- PREGUNTAS Y RESPUESTAS -->
+
+        <section id="seccion-preguntas" style="display: none;">
+
+            <h2>Registrar respuesta — Preguntas y respuestas</h2>
+
+            <h3>Jugador que respondió</h3>
+
+            <select id="jugador-pregunta">
+
+                <option value="eric">Eric</option>
+                <option value="amaro">Amaro</option>
+                <option value="adrian">Adrián</option>
+
+            </select>
+
+
+            <h3>Resultado</h3>
+
+            <button onclick="registrarRespuesta(5)">
+                Correcta (+5)
+            </button>
+
+            <button onclick="registrarRespuesta(3)">
+                Correcta con ayuda (+3)
+            </button>
+
+            <button onclick="registrarRespuesta(-1)">
+                Incorrecta (-1)
+            </button>
+
+
+            <h3>Otro jugador respondió correctamente</h3>
+
+            <select id="jugador-respuesta-correcta">
+
+                <option value="eric">Eric</option>
+                <option value="amaro">Amaro</option>
+                <option value="adrian">Adrián</option>
+
+            </select>
+
+            <button onclick="registrarRespuestaCorrecta()">
+                Sumar +1
+            </button>
+
+        </section>
+
+
+        <!-- INFRACCIONES -->
+
+        <section class="seccion-infracciones">
+
+            <h2>Registrar infracción</h2>
+
+            <select id="jugador-infraccion">
+
+                <option value="eric">Eric</option>
+                <option value="amaro">Amaro</option>
+                <option value="adrian">Adrián</option>
+
+            </select>
+
+            <input
+                type="text"
+                id="descripcion-infraccion"
+                placeholder="Escribí cuál fue la infracción"
+            >
+
+            <button onclick="registrarInfraccion()">
+                Registrar infracción
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+
+    <footer>
+
+        <button onclick="reiniciarTorneo()">
+            🔄 Reiniciar torneo
+        </button>
+
+        <a href="acercade.html">
+            Acerca de esta página
+        </a>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

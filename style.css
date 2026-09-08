@@ -1,0 +1,377 @@
+/* CONFIGURACIÓN GENERAL */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    font-weight: bold;
+
+    background-image: url("FONDO DE PAGINA.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* ENCABEZADO */
+
+/* ENCABEZADO PRINCIPAL */
+
+header {
+    padding: 60px 20px 40px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 55px;
+    font-weight: 900;
+    margin: 0 0 10px 0;
+
+    text-transform: uppercase;
+
+    text-shadow:
+        2px 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+header p {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+}
+
+
+/* PARTICIPANTES */
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+
+/* FOOTER */
+
+/* PIE DE PÁGINA */
+
+footer {
+    max-width: 900px;
+    margin: 40px auto 20px auto;
+    padding: 25px;
+
+    background-color: rgba(255, 255, 255, 0.85);
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.20);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+footer a {
+    padding: 12px 20px;
+
+    background-color: #222;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+footer a:hover {
+    transform: scale(1.05);
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* PARTICIPANTES */
+
+.contenedor-participantes {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.participante {
+    width: 220px;
+    text-align: center;
+}
+
+.foto-participante {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.foto-participante img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.foto-participante img:hover {
+    transform: scale(1.15);
+}justify-content: center;
+
+
+.participante h3 {
+    font-size: 24px;
+    margin: 15px 0 10px;
+}
+
+/* TARJETAS DE CONTENIDO */
+
+main section {
+    background-color: rgba(255, 255, 255, 0.82);
+
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    padding: 25px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.20);
+}
+
+/* CONTROLES GENERALES */
+
+select,
+input {
+    padding: 12px 15px;
+    font-size: 16px;
+    font-weight: bold;
+
+    border: 2px solid #333;
+    border-radius: 10px;
+
+    margin: 8px;
+
+    background-color: white;
+}
+
+
+/* MENÚ DE SELECCIÓN DE JUEGO */
+
+#juego {
+    min-width: 260px;
+    cursor: pointer;
+}
+
+
+/* BOTONES */
+
+button {
+    padding: 12px 20px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: #222;
+    color: white;
+
+    cursor: pointer;
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+
+/* EFECTO AL PASAR EL MOUSE */
+
+button:hover {
+    transform: scale(1.05);
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+/* CAMPOS DE TEXTO */
+
+input[type="text"],
+input[type="number"] {
+    min-width: 220px;
+}
+
+
+/* EFECTO CUANDO SELECCIONAMOS UN CAMPO */
+
+select:focus,
+input:focus {
+    outline: none;
+
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.35);
+}
+
+/* INFRACCIONES */
+
+.seccion-infracciones {
+    background-color: rgba(255, 220, 220, 0.90);
+
+    border: 2px solid rgba(150, 0, 0, 0.4);
+}
+
+.seccion-infracciones h2 {
+    color: #8b0000;
+}
+
+.seccion-infracciones button {
+    background-color: #8b0000;
+}
+
+.seccion-infracciones button:hover {
+    background-color: #b00000;
+}
+
+/* ==================================
+   DISEÑO PARA CELULARES
+   ================================== */
+
+@media (max-width: 700px) {
+
+    /* ENCABEZADO */
+
+    header {
+        padding: 40px 15px 25px;
+    }
+
+    header h1 {
+        font-size: 34px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+
+    /* CONTENIDO GENERAL */
+
+    main {
+        padding: 10px;
+    }
+
+    main section {
+        padding: 20px 12px;
+        margin-bottom: 25px;
+    }
+
+
+    /* PARTICIPANTES */
+
+    .contenedor-participantes {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .participante {
+        width: 100%;
+    }
+
+    .foto-participante {
+        width: 180px;
+        height: 180px;
+    }
+
+
+    /* FORMULARIOS */
+
+    select,
+    input {
+        box-sizing: border-box;
+        max-width: 100%;
+        margin: 8px 0;
+    }
+
+    #juego {
+        width: 100%;
+        min-width: 0;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    /* BOTONES */
+
+    button {
+        margin: 5px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        margin: 25px 10px 15px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}
+
+/* ACERCA DE */
+
+.acerca {
+    max-width: 700px;
+    margin: 80px auto;
+}
+
+.acerca h1 {
+    font-size: 42px;
+    margin-bottom: 25px;
+}
+
+.acerca h2 {
+    margin-top: 30px;
+}
+
+.acerca p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.boton-volver {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 12px 20px;
+
+    background-color: #222;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.boton-volver:hover {
+    transform: scale(1.05);
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+}
